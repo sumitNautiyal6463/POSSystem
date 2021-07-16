@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "925fad12-14c8-43f1-b0aa-7b76e6205b07",
+		"name": "POSSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login for Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EmailId\": \"admin@gmail.com\",\r\n    \"Password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54569/api/Login/Token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54569",
+					"path": [
+						"api",
+						"Login",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login for User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EmailId\": \"posuser@gmail.com\",\r\n    \"Password\": \"posuser123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54569/api/Login/Token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54569",
+					"path": [
+						"api",
+						"Login",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductSave By Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxIiwic3ViIjoiQWRtaW4iLCJyb2xlIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIkxvZ2dlZE9uIjoiMTYtMDctMjAyMSAxNjozNTowOSIsIm5iZiI6MTYyNjQ1MzMwOSwiZXhwIjoxNjI2NTM5NzA5LCJpYXQiOjE2MjY0NTMzMDksImlzcyI6Imh0dHA6Ly90ZWNoLmNvbSIsImF1ZCI6Imh0dHA6Ly90ZWNoLmNvbSJ9.NgQXEkMSpp9fA2xYiqDrGXnkhJkdAV3MImg1kG7pKVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Category\": \"Colors\",\r\n    \"ProductName\": \"Red\",\r\n    \"Description\": \"This is a red color\",\r\n    \"Quantity\": 7,\r\n    \"Price\": 7000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54569/api/Product/ProductSave",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54569",
+					"path": [
+						"api",
+						"Product",
+						"ProductSave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductGetById By Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxIiwic3ViIjoiQWRtaW4iLCJyb2xlIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIkxvZ2dlZE9uIjoiMTYtMDctMjAyMSAxNjozNTowOSIsIm5iZiI6MTYyNjQ1MzMwOSwiZXhwIjoxNjI2NTM5NzA5LCJpYXQiOjE2MjY0NTMzMDksImlzcyI6Imh0dHA6Ly90ZWNoLmNvbSIsImF1ZCI6Imh0dHA6Ly90ZWNoLmNvbSJ9.NgQXEkMSpp9fA2xYiqDrGXnkhJkdAV3MImg1kG7pKVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54569/api/Product/ProductGetById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54569",
+					"path": [
+						"api",
+						"Product",
+						"ProductGetById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductDelete By Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxIiwic3ViIjoiQWRtaW4iLCJyb2xlIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIkxvZ2dlZE9uIjoiMTYtMDctMjAyMSAxNjozNTowOSIsIm5iZiI6MTYyNjQ1MzMwOSwiZXhwIjoxNjI2NTM5NzA5LCJpYXQiOjE2MjY0NTMzMDksImlzcyI6Imh0dHA6Ly90ZWNoLmNvbSIsImF1ZCI6Imh0dHA6Ly90ZWNoLmNvbSJ9.NgQXEkMSpp9fA2xYiqDrGXnkhJkdAV3MImg1kG7pKVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54569/api/Product/ProductDelete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54569",
+					"path": [
+						"api",
+						"Product",
+						"ProductDelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductList By Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxIiwic3ViIjoiQWRtaW4iLCJyb2xlIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIkxvZ2dlZE9uIjoiMTYtMDctMjAyMSAxNjozNTowOSIsIm5iZiI6MTYyNjQ1MzMwOSwiZXhwIjoxNjI2NTM5NzA5LCJpYXQiOjE2MjY0NTMzMDksImlzcyI6Imh0dHA6Ly90ZWNoLmNvbSIsImF1ZCI6Imh0dHA6Ly90ZWNoLmNvbSJ9.NgQXEkMSpp9fA2xYiqDrGXnkhJkdAV3MImg1kG7pKVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": 0,\r\n    \"length\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54569/api/Product/ProductList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54569",
+					"path": [
+						"api",
+						"Product",
+						"ProductList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invoice By Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxIiwic3ViIjoiQWRtaW4iLCJyb2xlIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIkxvZ2dlZE9uIjoiMTYtMDctMjAyMSAxNjozNTowOSIsIm5iZiI6MTYyNjQ1MzMwOSwiZXhwIjoxNjI2NTM5NzA5LCJpYXQiOjE2MjY0NTMzMDksImlzcyI6Imh0dHA6Ly90ZWNoLmNvbSIsImF1ZCI6Imh0dHA6Ly90ZWNoLmNvbSJ9.NgQXEkMSpp9fA2xYiqDrGXnkhJkdAV3MImg1kG7pKVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"InvoiceNumber\": \"INV/01/1235\",\r\n    \"ProductIds\": \"4,5\",\r\n    \"VAT\": 2000,\r\n    \"Discount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54569/api/Invoice/InvoiceSave",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54569",
+					"path": [
+						"api",
+						"Invoice",
+						"InvoiceSave"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
