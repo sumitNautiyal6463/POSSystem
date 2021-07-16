@@ -102,6 +102,42 @@
 			"response": []
 		},
 		{
+			"name": "ProductUpdate By Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxIiwic3ViIjoiQWRtaW4iLCJyb2xlIjoiQWRtaW4iLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIkxvZ2dlZE9uIjoiMTYtMDctMjAyMSAxNjozNTowOSIsIm5iZiI6MTYyNjQ1MzMwOSwiZXhwIjoxNjI2NTM5NzA5LCJpYXQiOjE2MjY0NTMzMDksImlzcyI6Imh0dHA6Ly90ZWNoLmNvbSIsImF1ZCI6Imh0dHA6Ly90ZWNoLmNvbSJ9.NgQXEkMSpp9fA2xYiqDrGXnkhJkdAV3MImg1kG7pKVA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Category\": \"Colors\",\r\n    \"ProductName\": \"Red\",\r\n    \"Description\": \"This is a red color\",\r\n    \"Quantity\": 7,\r\n    \"Price\": 7000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54569/api/Product/ProductSave",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54569",
+					"path": [
+						"api",
+						"Product",
+						"ProductSave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "ProductGetById By Admin",
 			"request": {
 				"method": "POST",
